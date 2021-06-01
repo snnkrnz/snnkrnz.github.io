@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Play:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Play', sans-serif;
+}
+
+.header {
+    height: 10vh;
+}
+body {
+    height: 100%;
+    
+}
+.content {
+    height: 80vh;
+}
+.popupChannel {
+    z-index: 999;
+    position:absolute;
+}
+.black {
+    z-index: 998;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.kanalbaslik {
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 5rem;
+}
+
+.isimler {
+    max-height: 90vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;;
+}
+
+.offcanvas {
+    width: 800px !important;
+    height: 80%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: transparent !important;
+    border: none !important;
+    color: white !important;
+}
+
+.kazanan {
+    font-family: 'Play', sans-serif;
+}
+
+.baslatbutonu {
+    font-size: 61px !important;
+}
+.tostpos {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.wingoster{
+    font-size: 110px ;
+    letter-spacing: -10px;
+    text-transform: capitalize;
+}
+
+.kutlama {
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 3s infinite linear;
+}
+
+@keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    letter-spacing: 10px;
+  }
+  50% {
+    -webkit-filter: hue-rotate(-360deg);
+    letter-spacing: -10px;
+  }
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+    letter-spacing: 10px;
+  }
+}
+
+.isimler li{
+    background-color: bisque;
+    width: 90%;
+    padding-left: 10px;
+    font-family: 'Odibee Sans', cursive;
+    letter-spacing: 1px;
+    font-size: 27px;
+    padding: 5px 5px;
+}
+
+::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: rgb(7, 11, 223);	
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.rainbow {
+	position: relative;
+	z-index: 0;
+	width: 400px;
+	height: 200px;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+}
+	.rainbow::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+		animation: rotate 4s linear infinite;
+	}
+	
+	.rainbow::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: transparent;
+		border-radius: 5px;
+	}
+
+
+.overhang-overrides {
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    font-weight: bold;
+}
+
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    z-index: -50;
+  }
+  
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+    color: #F5F5F5;
+    z-index: -1;
+}
+  
+.bgTop {
+    /*z-index: 2;*/
+    opacity: 0.5;
+    position: absolute;
+}
+  
+.bgMiddle {
+    z-index: -1;
+    opacity: 0.75;
+    position: absolute;
+}
+  
+.bgBottom {
+    z-index: -2;
+    position: absolute;
+}
+  
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+  
+.waveTop {
+    background-size: 50% 100px;
+}
+  
+.waveAnimation .waveTop {
+    animation: move-wave 3s;
+    -webkit-animation: move-wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+  
+.waveMiddle {
+    background-size: 50% 120px;
+}
+  
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+  
+.waveBottom {
+    background-size: 50% 100px;
+}
+  
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+@keyframes move_wave {
+    0% {
+    transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1)
+}
+} 
+      
