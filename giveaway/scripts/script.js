@@ -115,7 +115,7 @@ function setChannel(){
                         scrolling="no"
                         id="chat_embed"
                         src="https://www.twitch.tv/embed/${channel}/chat?parent=snnkrnz.github.io&darkpopout"
-			sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-modals">
+			sandbox="allow-storage-access-by-user-activation">
                         height="100%"
                         width="100%">
                     </iframe>`;
