@@ -114,7 +114,7 @@ function setChannel(){
     document.getElementById("chat").innerHTML = `<iframe frameborder="0"
                         scrolling="no"
                         id="chat_embed"
-                        src="https://www.twitch.tv/embed/${channel}/chat?parent=127.0.0.1"
+                        src="https://www.twitch.tv/embed/${channel}/chat?darkpopout"
                         height="100%"
                         width="100%">
                     </iframe>`;
