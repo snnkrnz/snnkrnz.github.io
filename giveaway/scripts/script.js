@@ -111,10 +111,11 @@ function setChannel(){
     
 
     client.join("#" + channel);
+    var hostadi = location.hostname;
     document.getElementById("chat").innerHTML = `<iframe frameborder="0"
                         scrolling="no"
                         id="chat_embed"
-                        src="https://www.twitch.tv/embed/${channel}/chat?parent=snnkrnz.github.io&darkpopout"
+                        src="https://www.twitch.tv/embed/${channel}/chat?parent=${hostadi}&darkpopout"
                         height="100%"
                         width="100%">
                     </iframe>`;
