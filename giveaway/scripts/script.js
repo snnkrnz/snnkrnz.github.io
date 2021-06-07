@@ -31,6 +31,9 @@ client.on('message', (channel, tags, message, self) => {
         participants = Array.from(Object.keys(users));
         updateParticipants(participants);
         console.log(participants);
+
+        $(".toplamk").text(count)
+        
     }
 
 });
@@ -40,10 +43,8 @@ function startentry(){
 }
 
 function setKeyword(){
-
     keyword = document.getElementById("keyword").value;
     console.log('Keyword has been setted');
-
 }
 
 $("#zorunlu").click(function(){
@@ -77,9 +78,20 @@ $(".keygir").keydown(function(){
         $(".altindaki > button").addClass("disabled")
     }
 });
+
+$(".key1").click(function(){
+    $(".bosgecme > input[type=text]").val("!çekiliş");
+    $(".altindaki > button").removeClass("disabled")
+})
+$(".key2").click(function(){
+    $(".bosgecme > input[type=text]").val("!raffle");
+    $(".altindaki > button").removeClass("disabled")
+})
+
 $("#tostkatilim").click(function(){
     $(".katilustu > button").removeClass("disabled")
     $(".sifirustu > button").removeClass("disabled")
+    $("#basladi").text("Katılımı Başlat")
 });
 $("#basladi").click(function(){
     $(".baslatustu > button").removeClass("disabled")
@@ -96,13 +108,15 @@ $("#basladi").click(function(){
 });
 $("#tostkatilim").click(function() {
     var ayarlaicerigi = $(".bosgecme > input[type=text]").val();
-    $(".keygoster").html(`Keyword ayarlandı. Sohbete <h2>${ayarlaicerigi}</h2> yazarak çekilişe katılabilirsiniz.`)
+    $(".keygoster").html(`Keyword ayarlandı. Sohbete <h5>${ayarlaicerigi}</h5> yazarak çekilişe katılabilirsiniz.`)
 });
 $("#tostsifir").click(function() {
     $("#keyword").val("");
     $(".altindaki > button").addClass("disabled")
     $(".katilustu > button").addClass("disabled")
     $(".sifirustu > button").addClass("disabled")
+    $(".baslatustu > button").addClass("disabled")
+    $(".baslatustu > button").removeClass("rainbow")
 })
 
 function setChannel(){
@@ -155,6 +169,7 @@ function updateParticipants(participants){
 
 $(".baslatustu > button").click(function() {
       $(".wingoster").fadeOut(1).delay(3000).fadeIn(10000);
+      $(".kartgor").fadeOut(1).delay(3000).fadeIn(10000);
 });
 
 function announceWinner(winner){
@@ -165,8 +180,9 @@ function announceWinner(winner){
                                 <div class="wingoster kutlama">${winner}</div>
                                 <p><img src="img/cool-doge.gif"></p>
                                 <hr>
-                                <p class="mb-0"><a target="blank" href="https://www.twitch.tv/popout/${channel}/viewercard/${winner}?popout=">Kartını Gör →</a></p>
+                                <p class="mb-0 kartgor"><a target="blank" href="https://www.twitch.tv/popout/${channel}/viewercard/${winner}?popout=">Kartını Gör →</a></p>
                             </div>`;
+    $(".sonk").fadeOut(1).delay(3000).fadeIn(10000).html(`<a href="https://www.twitch.tv/${winner}" target="blank" class="text-light">${winner}</a>`)
 }
 
 function noPart(){

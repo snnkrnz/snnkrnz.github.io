@@ -60,21 +60,25 @@
             <div class="col-4 vh-100 text-light">
                 <h1 class="kanalbaslik text-light text-center mt-4"></h1> <div class="h3 text-center mb-5"> kanalı çekilişi!</div> 
                 <div class="col-12 ms-auto me-auto w-75">
-                  <h6>Keyword Giriniz</h6>
+                  <span class="h6">Keyword Giriniz </span>
+                  <span class="key1 bg-dark border border-secondary rounded-top p-1 mb-1 float-end small" onclick="key1()"> !çekiliş</span> 
+                  <span class="key2 bg-dark border border-secondary rounded-top p-1 mb-1 float-end small" onclick="key2()"> !raffle</span>
                 <div class="input-group mb-3 bosgecme">
                     <input type="text" class="form-control bg-dark text-light border border-secondary keygir" placeholder="örn: !çekiliş" aria-label="Keyword" aria-describedby="button-addon2" id="keyword">
                     <div class="input-group-append altindaki">
                         <button class="btn btn-light ayarlabutonu disabled" onclick="setKeyword()" type="button" data-micron="groove" id="tostkatilim">Ayarla</button>
-                    </div>
+                    </div><br>
                 </div>
-            <div class="text-center katilustu"><button class="btn btn-warning w-100 py-2 my-3 disabled" data-micron="tada" onclick="startentry()" id="basladi">Katılımı Başlat</button></div>
-
+                
+            <div class="text-center katilustu"><button class="btn btn-warning w-100 py-2 my-3 disabled" data-micron="tada" onclick="startentry()" id="basladi">Keyword Ayarlanmadı</button></div>
             <div class="text-center sifirustu"><button class="btn btn-danger w-100 py-2 mb-3 disabled" id="tostsifir" data-micron="tada" onclick="reset()">Sıfırla</button></div>
             
             <div class="text-center baslatustu">
                 <button class="btn btn-success w-100 py-4 baslatbutonu disabled" data-micron="tada" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop" 
                 onclick="start()">BAŞLAT!</button>
             </div>
+            <div class="mt-4">Toplam Katılımcı: <label class="toplamk">0</label></div>
+            <div>Son Kazanan: <label class="sonk"></label></div>
             </div>
             
 
