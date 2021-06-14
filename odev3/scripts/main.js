@@ -74,12 +74,19 @@ $(".ekle").click(function(){
     <input type="checkbox" class="form-check-input " id="roundedExample2">
     <label class="form-check-label" for="roundedExample2">` + deger + ` </label> <span class="kucuk text-secondary ps-3">Ekl. Tarih: <span class="tarih">14.06.2021</span></span> <i class="bi bi-file-minus-fill float-end fs-5 delete"></i> <i class="bi bi-star-fill float-end fs-5 pe-2 yildiz"></i>
   </div></li>`)
+  $(".ortala > input").val("")
 })
 
+
+// çokluda sıkıntı ↓
+$(".ekle").click(function(){
 $(".delete").click(function(){
     alert("Sil'e tıklandı")
 })
+})
 
+$(".ekle").click(function(){
 $(".yildiz").click(function(){
     alert("Yıldız'a tıklandı")
+})
 })
