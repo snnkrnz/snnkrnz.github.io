@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Odev 3</title>
+</head>
+<body class="bg-dark">
+    <div class="main">
+        <!-- Üst -->
+        <div class="mainhead px-4">
+            <i class="fas fa-book-reader"></i> 
+            <div class="searchbox">
+                <i class="bi bi-search ps-4 pe-2"></i>
+                <input id="Ara" type="text" class="bg-transparent border-0 text-white" placeholder="Hızlı Ara">
+            </div>
+            <div class="gear"><i class="bi bi-gear-fill"></i></div>
+        </div>
+        <!-- Sol Menü -->
+        <div class="leftmenu">
+            <ul>
+                <li id="yeni" class="active"><i class="bi bi-card-checklist text-info sac"></i> <span>Yeni Ekle</span> </li>
+                <li id="bugun"><i class="bi bi-calendar3 text-success"></i> <span>Bugün Eklenenler</span> </li>
+                <li id="yildizli"><i class="bi bi-star-fill text-warning"></i> <span>Yıldızlı</span> </li>
+                <li id="gecmis"><i class="bi bi-calendar-x text-secondary"></i> <span>Geçmiş</span> </li>
+            </ul>
+        </div>
+        <!-- Sağ İçerik -->
+        <div class="rightmenu">
+            <div class="icerik">
+
+                <!-- TÜMÜ -->
+                <div class="yeni d-block">
+                    <div class="text-center pb-2">Yeni Giriş - İlaç, Spor, Su içme, Ders çalışma..</div>
+                <div class="ortala">
+                    <i class="bi bi-bookmark-plus-fill pe-1 fs-4"></i>
+                    <input type="text" class="w-50" placeholder=" Hatırlanacak..">
+                    <button class="btn btn-dark px-4 ekle">Ekle</button>
+                </div>
+                <div class="eklenenler pt-5">
+                    <ul>
+                        <li>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input " id="roundedExample2">
+                                <label class="form-check-label" for="roundedExample2">Bu Sabit..</label> <span class="kucuk text-secondary ps-3">Ekl. Tarih: <span class="tarih">14.06.2021</span></span> <i class="bi bi-file-minus-fill float-end fs-5 delete"></i> <i class="bi bi-star-fill float-end fs-5 pe-2 yildiz"></i>
+                              </div>
+                        </li>
+                        <!-- <li>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input " id="roundedExample2">
+                                <label class="form-check-label" for="roundedExample2">Spor Yap</label> <span class="kucuk text-secondary ps-3">Ekl. Tarih: <span class="tarih">14.06.2021</span></span> <i class="bi bi-file-minus-fill float-end fs-5 delete"></i> <i class="bi bi-star-fill float-end fs-5 pe-2"></i>
+                              </div>
+                        </li>
+                        <li>
+                            <div class="form-check ">
+                                <input type="checkbox" class="form-check-input " id="roundedExample2">
+                                <label class="form-check-label" for="roundedExample2">Ders Çalış</label> <span class="kucuk text-secondary ps-3">Ekl. Tarih: <span class="tarih">14.06.2021</span></span> <i class="bi bi-file-minus-fill float-end fs-5 delete"></i> <i class="bi bi-star-fill float-end fs-5 pe-2"></i>
+                              </div>
+                        </li>
+                        <li>
+                            <div class="form-check ">
+                                <input type="checkbox" class="form-check-input " id="roundedExample2">
+                                <label class="form-check-label" for="roundedExample2">Su iç</label> <span class="kucuk text-secondary ps-3">Ekl. Tarih: <span class="tarih">14.06.2021</span></span> <i class="bi bi-file-minus-fill float-end fs-5 delete"></i> <i class="bi bi-star-fill float-end fs-5 pe-2"></i>
+                              </div>
+                        </li> -->
+
+                    </ul>
+                </div>
+                </div>
+
+                <!-- BUGÜN -->
+                <div class="bugun d-none">
+                    <div class="text-center pb-2 h3">Bugün içinde yapılacaklar</div>
+                <div class="ortala d-none">
+                    <i class="bi bi-bookmark-plus-fill pe-1 fs-4"></i>
+                    <input type="text" class="w-50" placeholder=" Hatırlatılacak..">
+                    <button class="btn btn-dark px-4 ekle">Ekle</button>
+                </div>
+                <div class="eklenenler pt-5">
+                    <ul>
+
+                    </ul>
+                </div>
+                </div>
+                
+                <!-- YILDIZLI -->
+
+                <div class="yildizli d-none">
+                    <div class="text-center pb-2 h3">Yıldızlanmış Yapılacaklar</div>
+                <div class="ortala d-none">
+                    <i class="bi bi-bookmark-plus-fill pe-1 fs-4"></i>
+                    <input type="text" class="w-50" placeholder=" Hatırlatılacak..">
+                    <button class="btn btn-dark px-4 ekle">Ekle</button>
+                </div>
+                <div class="eklenenler pt-5">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                </div>
+
+                <!-- GEÇMİŞ -->
+
+                <div class="gecmis d-none">
+                    <div class="text-center pb-2 h3">Tarihi Geçmişlerin Listesi</div>
+                <div class="ortala d-none">
+                    <i class="bi bi-bookmark-plus-fill pe-1 fs-4"></i>
+                    <input type="text" class="w-50" placeholder=" Hatırlatılacak..">
+                    <button class="btn btn-dark px-4 ekle">Ekle</button>
+                </div>
+                <div class="eklenenler pt-5">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
