@@ -12,7 +12,7 @@ a {
 .main {
     position: relative;
     width: 70%;
-    overflow-y: hidden;
+    overflow-y: auto;
     height: calc(100vh - 60px);
     margin: 0 auto;
     background-color: #fff;
@@ -43,15 +43,25 @@ a {
 .rightmenu {
     float: left;
     width: 75%;
-    height: inherit;
-    border-left: 1px dashed rgb(102, 102, 102);
+}
+
+.opak {
+    opacity: .7;
+    text-decoration: line-through;
 }
 
 .searchbox {
     padding-left: 20%;
 }
+ul.todo-list > li {
+    margin: .75rem 0;
+}
 
-#Ara::placeholder {
+li.done {
+    text-decoration: line-through;
+}
+
+.Ara::placeholder {
     color: white;
     font-size: 15px;
     opacity: .7;
@@ -105,11 +115,6 @@ textarea:focus, input:focus{
     padding: 30px;
 }
 
-.ortala {
-    display: flex;
-    justify-content: center;
-}
-
 .eklenenler ul {
     list-style: none;
     padding: 0;
@@ -147,4 +152,12 @@ label {
 
 .form-check {
     margin-bottom: 10px;
+}
+
+.yildizarka {
+    background-color: rgb(255, 255, 194) !important;
+}
+
+.sil {
+    font-size: 14px;
 }

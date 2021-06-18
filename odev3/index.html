@@ -17,7 +17,7 @@
             <i class="fas fa-book-reader"></i> 
             <div class="searchbox">
                 <i class="bi bi-search ps-4 pe-2"></i>
-                <input id="Ara" type="text" class="bg-transparent border-0 text-white" placeholder="Hızlı Ara">
+                <input id="find" type="text" class="Ara bg-transparent border-0 text-white" placeholder="Hızlı Ara">
             </div>
             <div class="gear"><i class="bi bi-gear-fill"></i></div>
         </div>
@@ -27,78 +27,50 @@
                 <li id="yeni" class="active"><i class="bi bi-card-checklist text-info sac"></i> <span>Yeni Ekle</span> </li>
                 <li id="bugun"><i class="bi bi-calendar3 text-success"></i> <span>Bugün Eklenenler</span> </li>
                 <li id="yildizli"><i class="bi bi-star-fill text-warning"></i> <span>Yıldızlı</span> </li>
-                <li id="gecmis"><i class="bi bi-calendar-x text-secondary"></i> <span>Geçmiş</span> </li>
             </ul>
         </div>
         <!-- Sağ İçerik -->
         <div class="rightmenu">
             <div class="icerik">
 
-                <!-- TÜMÜ -->
-                <div class="yeni d-block">
-                    <div class="text-center pb-2">Yeni Giriş - İlaç, Spor, Su içme, Ders çalışma..</div>
-                <div class="ortala">
-                    <i class="bi bi-bookmark-plus-fill pe-1 fs-4"></i>
-                    <input type="text" class="w-50" placeholder=" Hatırlanacak..">
-                    <button class="btn btn-dark px-4 ekle">Ekle</button>
-                </div>
-                <div class="eklenenler pt-5">
-                    <ul>
-                        <!-- <li>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input " id="roundedExample2">
-                                <label class="form-check-label" for="roundedExample2">Bu Sabit..</label> <span class="kucuk text-secondary ps-3">Ekl. Tarih: <span class="tarih">14.06.2021</span></span> <i class="bi bi-file-minus-fill float-end fs-5 delete"></i> <i class="bi bi-star-fill float-end fs-5 pe-2 yildiz"></i>
-                              </div>
-                        </li> -->
-                    </ul>
-                </div>
+                <div class="yeni container">
+                    <h3 class="text-center ">Yeni Giriş</h3><h5 class="text-center text-secondary fs-6">İlaç, Spor, Su içme, Ders çalışma ...</h5>
+            
+                    <form class="d-flex justify-content-center" id="hatirlanacak">
+                        <input id="giris" type="text" class="form-control w-75" placeholder="Hatırlanacak.." required>
+                        <button class="btn btn-dark"><i class="bi bi-bookmark-plus-fill"></i></button>
+                    </form>
+                        <h6 class="text-center text-secondary small mt-3">Tarihe Göre Sırala</h6>
+                        <input type="date" id="datechanger" class="d-block mx-auto border-top-0 border-start-0 border-end-0 border-secondary"></input>
+                        <div class="text-center pt-3">
+                            <input type="checkbox" id="yildizlilar"> Yıldızlı mesajları göster</input>
+                            <div class="text-end text-secondary sil">
+                                Silmek için çift tıklayınız.
+                            </div>
+                        </div>
+                    <ul id="todos" class="list-unstyled mt-3 todo-list"></ul>
+                    
                 </div>
 
                 <!-- BUGÜN -->
                 <div class="bugun d-none">
                     <div class="text-center pb-2 h3">Bugün içinde yapılacaklar</div>
-                <div class="ortala d-none">
-                    <i class="bi bi-bookmark-plus-fill pe-1 fs-4"></i>
-                    <input type="text" class="w-50" placeholder=" Hatırlatılacak..">
-                    <button class="btn btn-dark px-4 ekle">Ekle</button>
-                </div>
-                <div class="eklenenler pt-5">
-                    <ul>
-
-                    </ul>
-                </div>
+                    <div class="text-center">
+                        <div class="spinner-border" role="status">
+                          <span class="visually-hidden">Loading...</span>
+                        </div>
+                      </div>
                 </div>
                 
                 <!-- YILDIZLI -->
 
                 <div class="yildizli d-none">
                     <div class="text-center pb-2 h3">Yıldızlanmış Yapılacaklar</div>
-                <div class="ortala d-none">
-                    <i class="bi bi-bookmark-plus-fill pe-1 fs-4"></i>
-                    <input type="text" class="w-50" placeholder=" Hatırlatılacak..">
-                    <button class="btn btn-dark px-4 ekle">Ekle</button>
-                </div>
-                <div class="eklenenler pt-5">
-                    <ul>
-                        
-                    </ul>
-                </div>
-                </div>
-
-                <!-- GEÇMİŞ -->
-
-                <div class="gecmis d-none">
-                    <div class="text-center pb-2 h3">Tarihi Geçmişlerin Listesi</div>
-                <div class="ortala d-none">
-                    <i class="bi bi-bookmark-plus-fill pe-1 fs-4"></i>
-                    <input type="text" class="w-50" placeholder=" Hatırlatılacak..">
-                    <button class="btn btn-dark px-4 ekle">Ekle</button>
-                </div>
-                <div class="eklenenler pt-5">
-                    <ul>
-                        
-                    </ul>
-                </div>
+                    <div class="text-center">
+                        <div class="spinner-border" role="status">
+                          <span class="visually-hidden">Loading...</span>
+                        </div>
+                      </div>
                 </div>
 
             </div>
