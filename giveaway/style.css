@@ -75,6 +75,10 @@ body {
     transform: translate(-50%, 0);
 }
 
+.kutuq {
+    min-width: 500px;
+}
+
 .wingoster{
     font-size: 110px ;
     letter-spacing: -10px;
@@ -272,5 +276,4 @@ body {
     100% {
     transform: translateX(-50%) translateZ(0) scaleY(1)
 }
-} 
-      
+}

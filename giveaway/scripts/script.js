@@ -151,7 +151,7 @@ function reset(){
 
 function start(){
     if(!participants.length) return noPart();
-    if(participants.length === 1) return onePart(participants[0]);
+   // if(participants.length === 1) return onePart(participants[0]);
     let winningNumber = Math.floor((Math.random() * participants.length));
     let winner = participants[winningNumber];
     
@@ -174,7 +174,7 @@ $(".baslatustu > button").click(function() {
 
 function announceWinner(winner){
 
-    document.getElementById("winner").innerHTML = `<div class="alert alert-success" role="alert">
+    document.getElementById("winner").innerHTML = `<div class="alert alert-success kutuq" role="alert">
                                 <h1 class="alert-heading">~ Tebrikler ~ </h1>
                                 <p>ÇEKİLİŞİ KAZANAN</p>
                                 <div class="wingoster kutlama">${winner}</div>
@@ -200,4 +200,3 @@ function onePart(winner){
                                 <img src="img/neemic.png" width="auto" height="380">
                             </div>`;
 }
-
