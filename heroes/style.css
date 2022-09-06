@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: black;
+    
+}
+
+#hide {
+    display: none;
+}
+
+#main-modal {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#main-modal #modal {
+    width: 360px;
+    height: 190px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+#modal .modaltitle {
+    padding: 15px 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+}
+
+#modal .modalcontent {
+    padding: 15px 5px;
+    font-size: 14px;
+}
+
+#modal #normal-mode,#modal #hard-mode {
+    width: 45%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #e5a43b;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#modal #hard-mode {
+    background-color: gray;
+    text-decoration: line-through;
+}
+
+#bottom-modal {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+#modal-input {
+    position: fixed;
+    background-color: #fff;
+    width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    left: 50%;
+    bottom: 8%;
+    transform: translate(-50%);
+}
+
+#champ-input {
+    padding: 7px 10px;
+    width: 70%;
+    border: 2px solid #e5a43b;
+    background-color: transparent;
+    font-weight: 600;
+    background-color: rgb(241, 241, 241);
+    border-radius: 4px;
+}
+
+#champ-input::placeholder{
+    color: #e5a43b;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+#champ-input:focus{
+    color: #e5a43b;
+    text-align: center;
+    background-color: #e2e2e2;
+    font-size: 15px;
+}
+
+#send {
+    width: 25%;
+    padding: 7px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #e5a43b;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+}
+
+#heroes {
+    position: relative;
+    color: aliceblue;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#heroes #hero-list {
+    position: absolute;
+    list-style: none;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+[id^="all-heroes-"] {
+    position: relative;
+    background-color: #e5a43b;
+    width: 13%;
+    min-width: 200px;
+    max-width: 300px;
+    max-height: 300px;
+    min-height: 200px;
+    border: 1px solid #362c0b;
+}
+
+#heroes-image-qm {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#heroes-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: .5em ridge rgb(0, 156, 0, .7);
+}
+
+#hero-name {
+    position: absolute;
+    width: 94%;
+    text-align: center;
+    bottom: 4px;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid rgba(0, 148, 0, 0.7);
+    padding: 4px;
+    color: white;
+    background: linear-gradient(0deg,rgba(0,0,0,1),rgba(13,29,40,.7));
+}
+
+#hero-name-qm {
+    position: absolute;
+    width: 88%;
+    text-align: center;
+    bottom: 7px;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 16px;
+    padding: 4px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+#centertop {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#bitir {
+    position: absolute;
+    right: 0;
+    background-color: #e5a43b;
+    color: black;
+    font-size: 20px;
+    padding: 0 5px;
+    font-weight: 600;
+    border-bottom: 1px solid red;
+    cursor: pointer;
+}
+
+#bitir:hover {
+    background-color: red;
+    color: white;
+}
+
+#score {
+    background-color: #e5a43b;
+    color: white;
+    font-size: 16px;
+    width: 5%;
+    min-width: 60px;
+    font-weight: 600;
+    border-bottom: 1px solid #fff8e1;
+    text-align: center;
+    margin-right: 2px;
+}
+
+#time {
+    background-color: #e5a43b;
+    color: white;
+    min-width: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 5%;
+    border-bottom: 1px solid #fff8e1;
+    text-align: center;
+    margin-left: 2px;
+}
+
+#end-game {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    background-color: antiquewhite;
+    width: 80%;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    border: 5px solid #e5a43b;
+}
+
+#your-score {
+    width: 100%;
+    display: block;
+    padding: 20px;
+    font-size: 31px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#missed {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+}
+
+#new-game {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #e5a43b;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+#yapim {
+    display: none;
+    margin-top: 15px;
+    color: white;
+}
+

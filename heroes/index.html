@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Heroes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-modal">
+        <div id="modal">
+            <div class="modaltitle">Tüm League of Legends şampiyonlarının adını biliyor musunuz?</div>
+            <div class="modalcontent">Kendinize ve arkadaşlarınıza meydan okuyun.</div>
+            <button id="hard-mode" onclick="normalMode()">Normal Mod</button>
+            <button id="normal-mode" onclick="hardMode()">Zor Mod</button>
+            <div id="yapim">Normal Mod yapım aşamasında.</div>
+        </div>
+    </div>
+<!--  heroes div -->
+    <div id="heroes">
+        <ul id="hero-list">
+        </ul>
+    </div>
+<!--  bottom modal  -->
+    <div id="bottom-modal">
+            <div id="centertop">
+                <button id="bitir">X</button>
+                <div id="score">0/161</div>
+                <div id="time">01:01</div>
+            </div>
+        
+        <div id="modal-input">
+            <input type="text" id="champ-input" placeholder="Şampiyon Adı">
+            <button id="send" onclick="tahmin()">Tahmin</button>
+            
+        </div>
+        <div id="end-game">
+        </div>
+    </div>   
+    
+
+<script src="script.js"></script>
+</body>
+</html>
