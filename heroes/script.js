@@ -312,7 +312,7 @@ function tahmin(){
     else if(gelenTahmin.toLowerCase()==kontrol2){
     
         if("all-heroes-"+tahmin2Index == gelenId2.getAttribute(`id`)){
-            let img = `<img id="heroes-image" src="images/${gelenTahmin}.jpg" alt="${gelenTahmin}">
+            let img = `<img id="heroes-image" src="images/${lolHeroes[lower.indexOf(gelenTahmin)]}.jpg" alt="${gelenTahmin}">
                         <span id="hero-name">${lolHeroes[lower.indexOf(gelenTahmin)]}</span>`;
             
             gelenId2.innerHTML = img;
