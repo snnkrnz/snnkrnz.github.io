@@ -288,8 +288,8 @@ function tahmin(){
     
     if(gelenTahmin==kontrol){
         if("all-heroes-"+tahminIndex == gelenId.getAttribute(`id`)){
-            let img = `<img id="heroes-image" src="images/${gelenTahmin}.jpg" alt="${gelenTahmin}">
-                        <span id="hero-name">${gelenTahmin}</span>`;
+            let img = `<img id="heroes-image" src="images/${lolHeroes[lolHeroes.indexOf(gelenTahmin)]}.jpg" alt="${gelenTahmin}">
+                        <span id="hero-name">${lolHeroes[lolHeroes.indexOf(gelenTahmin)]}</span>`;
             gelenId.innerHTML = img;
 
             // go to img
@@ -336,4 +336,13 @@ function tahmin(){
         let wrong = document.getElementById("champ-input");
         wrong.style.border = "2px solid red";
     }
+
+    if(gelenTahmin== "Jhed" || gelenTahmin == "jhed"){
+        let jhed = lolHeroes.map(e => {
+            return document.getElementById(`all-heroes-${lolHeroes.indexOf(e)}`).innerHTML = `<img id="heroes-image" src="images/${lolHeroes[lolHeroes.indexOf(e)]}.jpg" alt="${lolHeroes[lolHeroes.indexOf(e)]}">
+            <span id="hero-name">${lolHeroes[lolHeroes.indexOf(e)]}</span>`;
+            
+          });
+    }
+
 }
