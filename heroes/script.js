@@ -224,6 +224,9 @@ function tick() {
             sonucGoster.innerHTML = `<div id="your-score">Skorun: ${endScore}</div>
             <div id="missed">Unuttukların:<br> ${unuttun} </div><br>
             <button id="new-game" onclick="yenile()">Tekrar Oyna</button>`
+            if(document.getElementById(`score`).innerText == "161/161"){
+                document.getElementById(`missed`).style.display = "none";
+            }
         }
     }
     tick();
@@ -261,16 +264,14 @@ function normalMode(){
     setTimeout(yapim, 2000);
     function yapim() {
         document.getElementById("yapim").style.display = "none";
-}
-
-    
+}    
 }
 
 // input enter key
 let input = document.getElementById("champ-input");
 input.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
-        document.getElementById("send").click() = function() {tahmin()};
+        document.getElementById("send").click();
       }
     });
 
@@ -337,12 +338,12 @@ function tahmin(){
         wrong.style.border = "2px solid red";
     }
 
-    if(gelenTahmin== "Jhed" || gelenTahmin == "jhed"){
+    if(gelenTahmin== "Jhed" || gelenTahmin == "jhed" || gelenTahmin == "elo"){
         let jhed = lolHeroes.map(e => {
-            return document.getElementById(`all-heroes-${lolHeroes.indexOf(e)}`).innerHTML = `<img id="heroes-image" src="images/${lolHeroes[lolHeroes.indexOf(e)]}.jpg" alt="${lolHeroes[lolHeroes.indexOf(e)]}">
+            document.getElementById(`all-heroes-${lolHeroes.indexOf(e)}`).innerHTML = `<img id="heroes-image" src="images/${lolHeroes[lolHeroes.indexOf(e)]}.jpg" alt="${lolHeroes[lolHeroes.indexOf(e)]}">
             <span id="hero-name">${lolHeroes[lolHeroes.indexOf(e)]}</span>`;
-            
+            console.log("sa");
+            document.getElementById(`score`).innerText = "161/161";
           });
     }
-
 }
